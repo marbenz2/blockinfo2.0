@@ -5,8 +5,6 @@ import TransactionTicker from "./components/TransactionTicker";
 import Footer from "./components/Footer";
 
 function App() {
-  console.log("trigger whole app");
-
   return (
     <main className="relative flex w-full min-h-screen justify-center">
       <div className="flex flex-col gap-4 w-full max-w-[2560px]">
