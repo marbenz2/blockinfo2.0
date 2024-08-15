@@ -6,8 +6,15 @@ import { useEffect } from "react";
 import UserAddress from "./UserAddress";
 import UserVetBalance from "./UserVetBalance";
 import UserVthoBalance from "./UserVthoBalance";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../ui/card";
 import UserTransactions from "./UserTransactions";
+import UserNodeStatus from "./UserNodeStatus";
 
 export default function UserInfo() {
   const { account } = useWallet();
@@ -36,6 +43,9 @@ const IsUser = () => {
         <CardTitle>
           <UserAddress />
         </CardTitle>
+        <CardDescription className="flex gap-4 items-center">
+          <UserNodeStatus />
+        </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-2">
         <UserVetBalance />
