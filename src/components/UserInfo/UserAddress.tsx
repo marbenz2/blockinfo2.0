@@ -32,7 +32,7 @@ const UserAddress = () => {
           {name ? (
             <p>{name}</p>
           ) : (
-            <Skeleton className="w-[150px] h-[20px] rounded-full bg-black" />
+            <Skeleton className="w-[150px] h-[20px] rounded-full bg-secondary" />
           )}
           <p className="flex items-center gap-2 text-muted-foreground text-sm font-normal">
             <CopyIcon
