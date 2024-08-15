@@ -6,6 +6,7 @@ import XNodeImage from "./XNodeImage";
 import { Skeleton } from "../ui/skeleton";
 import { useNodeInfoStore } from "@/stores/node-info";
 import { useUserInfoStore } from "@/stores/user-info";
+import { NftXMetadata } from "@/types/types";
 
 const abiIsX = {
   constant: true,
@@ -105,19 +106,22 @@ const Xnode = () => {
     }
   };
 
-  const metaByTokenId = async (tokenId: number | null) => {
+  const metaByTokenId = async (
+    tokenId: number | null
+  ): Promise<NftXMetadata | null> => {
     try {
       const { decoded: metadata } = await connex.thor
         .account(X_CONTRACT_ADDRESS)
         .method(abiGetMetadata)
         .call(tokenId);
-      return metadata;
+      return metadata as NftXMetadata;
     } catch (err) {
       if (typeof err === "string") {
         setErrorMessage(err);
       } else if (err instanceof Error) {
         setErrorMessage(err.message);
       }
+      return null;
     }
   };
 

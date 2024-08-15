@@ -16,5 +16,11 @@ export type NftMetadata = {
 };
 
 export type NftXMetadata = {
+  owner: string;
   level: string;
+  isOnUpgrade: boolean;
+  isOnAuction: boolean;
+  lastTransferTime: number;
+  createdAt: number;
+  updatedAt: number;
 };
