@@ -8,11 +8,12 @@ const UserVetBalance = () => {
   return (
     <>
       {isLoading && (
-        <Skeleton className="w-[100px] h-[20px] rounded-full bg-black" />
+        <Skeleton className="w-[125px] h-[20px] rounded-full bg-secondary" />
       )}
       {!isLoading && vetBalanceUser && (
-        <p className="text-sm">
-          {formatToLocaleString(formatAmount(vetBalanceUser))} VET
+        <p className="flex items-center gap-2 text-sm">
+          <img src="/VET_Token_Icon.webp" alt="vet-icon" className="w-4 h-4" />
+          {formatToLocaleString(formatAmount(vetBalanceUser))}
         </p>
       )}
     </>
