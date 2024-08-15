@@ -6,7 +6,6 @@ const Footer = () => {
       <p className="flex items-center gap-2">
         powered by{" "}
         <img src="/VET_Token_Icon.webp" alt="vet-icon" className="w-4 h-4" />
-        <img src="/VTHO_Token_Icon.webp" alt="vtho-icon" className="w-4 h-4" />
       </p>
     </footer>
   );
