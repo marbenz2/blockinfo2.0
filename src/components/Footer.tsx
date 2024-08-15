@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="flex w-full justify-center items-center gap-12 py-4 px-4 border-b bg-background text-sm">
+    <footer className="flex w-full justify-center items-center gap-4 py-4 px-4 border-b bg-background text-sm">
       <p>Copyright &copy; {new Date().getFullYear()} - MarBenz</p>
       <p>||</p>
       <p className="flex items-center gap-4">
