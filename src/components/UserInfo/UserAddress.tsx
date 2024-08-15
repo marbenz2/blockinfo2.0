@@ -50,7 +50,17 @@ const UserAddress = () => {
               </p>
             </>
           ) : (
-            <p>{formatTxID(wallet.account)}</p>
+            <>
+              <p>{formatTxID(wallet.account)}</p>
+              <p className="flex items-center gap-2 text-muted-foreground text-sm font-normal">
+                <CopyIcon
+                  className="cursor-pointer"
+                  size={12}
+                  onClick={handleCopyClick}
+                />
+                ({wallet.account})
+              </p>
+            </>
           )}
         </>
       )}
