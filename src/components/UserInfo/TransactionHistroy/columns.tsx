@@ -2,6 +2,7 @@ import { formatAmount, formatToLocaleString, formatTxID } from "@/lib/utils";
 import { ColumnDef } from "@tanstack/react-table";
 import { WalletNameCell } from "./WalletNameCell";
 import { InOutCell } from "./InOutCell";
+import { SquareArrowOutUpRightIcon } from "lucide-react";
 
 export const columns: ColumnDef<Connex.Thor.Filter.Row<"transfer", object>>[] =
   [
@@ -17,9 +18,10 @@ export const columns: ColumnDef<Connex.Thor.Filter.Row<"transfer", object>>[] =
               href={`https://explore.vechain.org/transactions/${txID}`}
               target="_blank"
               rel="noreferrer"
-              className="underline decoration-dashed"
+              className="flex gap-2 items-center underline decoration-dashed"
               title={txID}
             >
+              <SquareArrowOutUpRightIcon size="14px" />
               {formattedTxID as string}
             </a>
           </div>
@@ -66,7 +68,16 @@ export const columns: ColumnDef<Connex.Thor.Filter.Row<"transfer", object>>[] =
       cell: ({ row }) => {
         const amount = row.getValue("amount");
         const formatted = formatToLocaleString(formatAmount(amount as string));
-        return <div className="text-right font-medium">{formatted}</div>;
+        return (
+          <div className="flex items-center justify-end gap-1 font-medium">
+            {formatted}
+            <img
+              src="/VET_Token_Icon.webp"
+              alt="vet-icon"
+              className="w-4 h-4"
+            />
+          </div>
+        );
       },
     },
   ];
