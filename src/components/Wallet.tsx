@@ -1,7 +1,7 @@
 import { useWalletModal, useWallet } from "@vechain/dapp-kit-react";
 import { useWalletName } from "@/hooks/use-wallet-name";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { cn, formatTxID } from "@/lib/utils";
 import { WalletIcon } from "lucide-react";
 
 export default function Wallet({ className }: { className?: string }) {
@@ -26,7 +26,7 @@ export function DisconnectButton({ className }: { className?: string }) {
         ? name.length <= 8
           ? name.replace(".vet", " .vet")
           : name
-        : wallet.account}
+        : formatTxID(wallet.account!)}
     </Button>
   );
 }
