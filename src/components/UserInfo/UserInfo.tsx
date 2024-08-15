@@ -14,7 +14,7 @@ import {
   CardTitle,
 } from "../ui/card";
 import UserTransactions from "./UserTransactions";
-import UserNodeStatus from "./UserNodeStatus";
+import Xnode from "./Xnode";
 
 export default function UserInfo() {
   const { account } = useWallet();
@@ -43,8 +43,8 @@ const IsUser = () => {
         <CardTitle>
           <UserAddress />
         </CardTitle>
-        <CardDescription className="flex gap-4 items-center">
-          <UserNodeStatus />
+        <CardDescription className="flex gap-2 items-center">
+          <Xnode />
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-2">
