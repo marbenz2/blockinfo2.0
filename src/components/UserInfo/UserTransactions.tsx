@@ -9,7 +9,7 @@ const UserTransactions = () => {
   return (
     <>
       {isLoading && (
-        <Skeleton className="w-[100px] h-[20px] rounded-full bg-black" />
+        <Skeleton className="w-full h-[40px] rounded-lg bg-secondary" />
       )}
       {!isLoading && userTx.length === 0 && <p>No transaction history</p>}
       {!isLoading && userTx.length > 0 && (
