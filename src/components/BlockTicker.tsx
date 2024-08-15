@@ -28,7 +28,7 @@ const BlockTicker = () => {
         <CardTitle className="flex gap-2 items-center">
           Block:{" "}
           {isLoading && (
-            <Skeleton className="w-[75px] h-[20px] rounded-full bg-black" />
+            <Skeleton className="w-[125px] h-[25px] rounded-full bg-secondary" />
           )}
           {!isLoading && !errorMessage && tickerHead && (
             <>{formatToLocaleString(tickerHead.number)}</>
@@ -39,7 +39,7 @@ const BlockTicker = () => {
         <div className="flex gap-2 items-center">
           Clauses:{" "}
           {isLoading && (
-            <Skeleton className="w-[30px] h-[16px] rounded-full bg-black" />
+            <Skeleton className="w-[40px] h-[16px] rounded-full bg-secondary" />
           )}
           {!isLoading && !errorMessage && blockInfo && clausesNumbers && (
             <>{clausesNumbers}</>
@@ -48,7 +48,7 @@ const BlockTicker = () => {
         <div className="flex gap-2 items-center">
           Transactions:{" "}
           {isLoading && (
-            <Skeleton className="w-[30px] h-[16px] rounded-full bg-black" />
+            <Skeleton className="w-[40px] h-[16px] rounded-full bg-secondary" />
           )}
           {!isLoading &&
             !errorMessage &&
