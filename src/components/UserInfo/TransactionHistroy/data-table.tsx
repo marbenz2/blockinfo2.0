@@ -43,7 +43,7 @@ export function DataTable<TData, TValue>({
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="item-1">
         <AccordionTrigger className="text-sm">
-          Transaction History
+          Show Transaction History
         </AccordionTrigger>
         <AccordionContent>
           <div>
